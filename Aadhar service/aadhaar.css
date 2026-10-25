@@ -1,0 +1,178 @@
+/* ===========================
+      Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/* Body */
+
+body{
+
+    background:#f4f7fb;
+
+}
+
+
+
+/* Header */
+
+header{
+
+    background:#0066cc;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+header p{
+
+    margin-top:8px;
+
+}
+
+
+
+/* Service Section */
+
+.services{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+/* Card */
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/* Heading */
+
+.card h2{
+
+    color:#0066cc;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* Paragraph */
+
+.card p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* Button */
+
+.card a{
+
+    display:inline-block;
+
+    background:#0066cc;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+
+
+.card a:hover{
+
+    background:#004b99;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+padding:20px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+}

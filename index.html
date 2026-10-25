@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dev Cyber Cafe</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#F4F5F7;
+color:#333;
+}
+
+/* NOTICE BAR */
+
+marquee{
+background:#ff9800;
+color:white;
+padding:12px;
+font-size:18px;
+font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(to right,#0072ff,#00c6ff);
+color:white;
+text-align:center;
+padding:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+font-size:45px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+}
+
+/* NAVBAR */
+
+nav{
+background:#111;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px 20px;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00c6ff;
+}
+
+/* WELCOME BAR */
+
+.welcome{
+background:#fff3cd;
+padding:12px;
+text-align:center;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+height:400px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+}
+
+.hero-content h2{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.hero-content button{
+background:#0072ff;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-content button:hover{
+background:#0056cc;
+}
+
+/* CLOCK */
+
+#clock{
+text-align:center;
+font-size:20px;
+font-weight:bold;
+padding:15px;
+background:rgb(250, 252, 252);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SLIDER */
+
+.slider{
+width:90%;
+max-width:1200px;
+height:350px;
+margin:30px auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.slider img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px 0;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-title h2{
+font-size:40px;
+color:#0072ff;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.box{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.box:hover{
+transform:translateY(-8px);
+background:#0072ff;
+color:white;
+}
+
+/* DOCUMENT SECTION */
+
+.documents{
+margin-top:50px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.documents article{
+padding:10px;
+border-bottom:1px solid #ddd;
+font-size:18px;
+}
+
+/* FORM */
+
+form{
+margin-top:20px;
+}
+
+input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+select,
+textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+button{
+background:#0072ff;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#0056cc;
+}
+
+/* TABLE */
+
+table{
+border-collapse:collapse;
+width:100%;
+text-align:center;
+background:white;
+}
+
+table th{
+background:#0072ff;
+color:white;
+}
+
+table th,
+table td{
+padding:15px;
+border:1px solid #ddd;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+footer a{
+color:#00c6ff;
+text-decoration:none;
+}
+
+/* DARK MODE */
+
+.dark{
+background:#111 !important;
+color:white;
+}
+
+.dark .box,
+.dark .documents,
+.dark #clock{
+background:#222;
+color:white;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:32px;
+}
+
+.hero-content h2{
+font-size:35px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NOTICE BAR -->
+
+<marquee>
+🔥 Latest Results, Scholarship, Admit Card & Online Forms Available Here 🔥
+</marquee>
+
+<!-- HEADER -->
+
+<header>
+
+<h1>Dev Cyber Cafe</h1>
+
+<p>All Online Services Available</p>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#services">Services</a>
+
+<a href="Results.html">Results</a>
+
+<a href="contacts.html">Contact</a>
+
+</nav>
+
+<!-- WELCOME -->
+
+<div class="welcome">
+
+🙏 Welcome to Dev Cyber Cafe
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Welcome to Dev Cyber Cafe</h2>
+
+<p>
+Online Form • PAN Card • Result • Aadhaar • Ticket Booking
+</p>
+
+<a href="Results.html" target="_blank">
+
+<button>
+
+Check Latest Results
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- LIVE CLOCK -->
+
+<div id="clock"></div>
+
+<!-- IMAGE SLIDER -->
+
+<section class="slider">
+
+<img
+id="slideImage"
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop">
+
+</section>
+
+<!-- CONTAINER -->
+
+<section class="container">
+
+<!-- SERVICES -->
+
+<div class="section-title">
+
+<h2 id="services">
+
+Our Online Services
+
+</h2>
+
+<p style="margin-top:10px;">
+Fast • Secure • Trusted Services
+</p>
+
+</div>
+
+<div class="services">
+<a href="Form filing/index.html"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔ Online Form Filling</div></a>
+<a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔New PAN Card Apply</div></a>
+<a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔ PAN Correction</div></a>
+
+<a href="https://www.pan.utiitsl.com/"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔ UTI PAN Card</div></a>
+
+<a href="https://www.incometax.gov.in/iec/foportal/"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔Instant e-PAN </div></a>
+
+<a href="Aadhar service/aadhaar.html"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔ Aadhaar Services</div></a>
+
+<a href="Check result.html"
+       target="_blank"target="_blank"
+style="text-decoration: none;">
+<div class="box">✔ Result Checking</div></a>
+
+<a href="https://www.sarkariresult.com/admitcard/"
+target="_blank"
+style="text-decoration:none;">
+
+<div class="box">✔ Admit Card</div>
+
+</a>
+
+</div>
+
+<!-- WHY CHOOSE US -->
+
+<div class="documents">
+
+<h2>Why Choose Us?</h2>
+
+<br>
+
+<p>✔ Fast Online Services</p>
+
+<p>✔ Instant Print & Scan</p>
+
+<p>✔ Railway & Flight Ticket Booking</p>
+
+<p>✔ Government Form Filling</p>
+
+<p>✔ Scholarship & Result Support</p>
+
+</div>
+
+<!-- DOCUMENTS -->
+
+<div class="documents">
+
+<h2>Required Documents</h2>
+
+<br>
+
+<article>📄 आधार कार्ड</article>
+
+<article>📄 कक्षा 12वीं की मार्कशीट</article>
+
+<article>📄 निवास प्रमाण पत्र</article>
+
+<article>📄 जाति प्रमाण पत्र</article>
+
+<article>📄 हस्ताक्षर</article>
+
+<article>📄 पासपोर्ट साइज फोटो</article>
+
+<article>📄 ईमेल आईडी</article>
+
+<article>📄 मोबाइल नंबर आदि</article>
+
+</div>
+
+<!-- PAYMENT -->
+
+<div class="documents">
+
+    <h2>💳 Online Payment</h2>
+
+    <br>
+
+    <img
+        src="assets\images/phonepay.jpg"
+        alt="PhonePe QR Code"
+        width="220"
+        style="width:220px; height:250px; object-fit:cover; display:block; margin:auto;">
+
+
+    <br>
+
+    <p style="text-align:center; font-size:18px;">
+        PhonePe / Paytm / Google Pay Accepted
+    </p>
+
+</div>
+
+<!-- PRICE LIST -->
+
+<div class="documents">
+
+<h2>📋 Service Price List</h2>
+
+<br>
+
+<table>
+
+<tr>
+
+<th>Service</th>
+
+<th>Price</th>
+
+</tr>
+
+<tr>
+
+<td>Online Form Fill</td>
+
+<td>₹100</td>
+
+</tr>
+
+<tr>
+
+<td>PAN Card Apply</td>
+
+<td>₹200</td>
+
+</tr>
+
+<tr>
+
+<td>Train Ticket Booking</td>
+
+<td>₹100</td>
+
+</tr>
+
+<tr>
+
+<td>Print Out</td>
+
+<td>₹5/page</td>
+
+</tr>
+
+<tr>
+
+<td>Photo Copy</td>
+
+<td>₹3/page</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Enter Your Name" required>
+
+<input type="text" id="mobile" placeholder="Mobile Number" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<select id="service" required>
+    <option value="">Select Service</option>
+    <option>Online Form</option>
+    <option>PAN Card</option>
+    <option>Aadhaar</option>
+    <option>Train Ticket</option>
+</select>
+
+<textarea id="message" placeholder="Message"></textarea>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p>
+📞 Call or WhatsApp:
+7903810660
+</p>
+
+<p>
+📍 Address:
+Muzaffarpur, Bihar
+</p>
+
+<p>
+🕒 Open:
+8 AM - 8 PM
+</p>
+
+<br>
+
+<a href="https://wa.me/917903810660"
+target="_blank">
+
+<button>
+
+Chat on WhatsApp
+
+</button>
+
+</a>
+
+</div>
+
+<!-- MAP -->
+
+<div class="documents">
+
+<h2>📍 Our Location</h2>
+
+<br>
+
+<div class="info">
+<i class="fa-solid fa-location-dot"></i>
+Bochahan, Muzaffarpur, Bihar
+</div>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/917903810660"
+target="_blank"
+class="whatsapp">
+
+💬
+
+</a>
+
+<!-- DARK MODE -->
+
+<button onclick="darkMode()"
+style="
+position:fixed;
+top:20px;
+right:20px;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:#111;
+color:white;
+cursor:pointer;
+z-index:1000;">
+
+🌙 Dark Mode
+
+</button>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Dev Cyber Cafe</h2>
+
+<br>
+
+<p>
+All Online Services Available
+</p>
+
+<br>
+
+<p>
+📞 Contact:
+<a href="tel:7903810660">
+7903810660
+</a>
+</p>
+
+<p>
+📧 Email:
+<a href="mailto:kumardev84310@gmail.com">
+kumardev843103@gmail.com
+</a>
+</p>
+
+<p>
+📍 Muzaffarpur, Bihar
+</p>
+
+<br>
+
+<p>
+© 2026 Dev Cyber Cafe | All Rights Reserved
+</p>
+
+</footer>
+
+<!-- SCRIPTS -->
+
+<script>
+    
+
+/* CLOCK */
+
+setInterval(()=>{
+
+document.getElementById('clock').innerHTML =
+
+"🕒 " + new Date().toLocaleString();
+
+},1000);
+
+/* IMAGE SLIDER */
+
+const images = [
+
+"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
+
+"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
+
+"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop"
+
+];
+
+let index = 0;
+
+setInterval(()=>{
+
+index++;
+
+if(index >= images.length){
+
+index = 0;
+
+}
+
+document.getElementById('slideImage').src = images[index];
+
+},3000);
+
+/* DARK MODE */
+
+function darkMode(){
+
+document.body.classList.toggle('dark');
+
+}
+/* ===========================
+   GOOGLE SHEET FORM SUBMIT
+=========================== */
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyCGFasoDHhK76zDcmiMjV4aRjSlbB0tD5TKVMv-Mw34B4TVzm4JsZARiG0ECb11S7j/exec";
+
+const form = document.getElementById("contactForm");
+const submitBtn = form.querySelector("button");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    // Mobile Number Validation
+    const mobile = document.getElementById("mobile").value.trim();
+
+    if (!/^[6-9]\d{9}$/.test(mobile)) {
+        alert("Please enter a valid 10 digit mobile number.");
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Submitting...";
+
+    const data = {
+        name: document.getElementById("name").value,
+        mobile: mobile,
+        email: document.getElementById("email").value,
+        service: document.getElementById("service").value,
+        message: document.getElementById("message").value
+    };
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(() => {
+
+        alert("✅ Form Submitted Successfully!");
+
+        form.reset();
+
+    })
+    .catch(error => {
+
+        alert("❌ Submission Failed!");
+
+        console.log(error);
+
+    })
+    .finally(() => {
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Submit";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Check Result - Dev Cyber Cafe</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(-45deg,#e3f2fd,#bbdefb,#ffffff,#90caf9);
+      background-size:400% 400%;
+      animation:bg 12s ease infinite;
+    }
+
+    @keyframes bg{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    /* Notice Bar */
+
+    marquee{
+      background:#0d6efd;
+      color:white;
+      padding:10px;
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    /* Header */
+
+    .header{
+      text-align:center;
+      padding:40px 20px;
+      color:#0d6efd;
+    }
+
+    .header h1{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .header p{
+      font-size:20px;
+      color:#333;
+    }
+
+    /* Clock */
+
+    #clock{
+      margin-top:15px;
+      font-size:20px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    /* Search Box */
+
+    .search-box{
+      width:90%;
+      max-width:500px;
+      margin:20px auto;
+      text-align:center;
+    }
+
+    .search-box input{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:30px;
+      outline:none;
+      font-size:18px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Result Links */
+
+    .result-links{
+      width:90%;
+      max-width:1200px;
+      margin:50px auto;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .result-links a{
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(10px);
+      color:#0d6efd;
+      text-decoration:none;
+      padding:25px 20px;
+      text-align:center;
+      border-radius:20px;
+      font-size:20px;
+      font-weight:bold;
+      border:2px solid rgba(13,110,253,0.2);
+
+      transition:0.4s;
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .result-links a:hover{
+      background:#0d6efd;
+      color:white;
+
+      transform:translateY(-10px) scale(1.03);
+
+      box-shadow:0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    /* Footer */
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    /* WhatsApp Button */
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:35px;
+      text-decoration:none;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      z-index:1000;
+      transition:0.3s;
+    }
+
+    .whatsapp:hover{
+      transform:scale(1.1);
+    }
+
+    @media(max-width:600px){
+
+      .header h1{
+        font-size:30px;
+      }
+
+      .header p{
+        font-size:16px;
+      }
+
+      .result-links a{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Notice -->
+
+  <marquee>
+    🔥 Latest Results, Admit Cards & Scholarship Updates Available Here 🔥
+  </marquee>
+
+  <!-- Header -->
+
+  <div class="header">
+    <h1>Check Exam Results</h1>
+    <p>Dev Cyber Cafe - All Result Links Available</p>
+
+    <div id="clock"></div>
+  </div>
+
+  <!-- Search Box -->
+
+  <div class="search-box">
+    <input type="text" placeholder="🔍 Search Result Links...">
+  </div>
+
+  <!-- Result Links -->
+
+  <div class="result-links">
+
+    <a href="https://result.biharboardonline.org/"
+    target="_blank" rel="noopener noreferrer">
+    🏆 Bihar Board Result
+    </a>
+
+    <a href="https://ssc.gov.in/home/candidate-result"
+    target="_blank" rel="noopener noreferrer">
+    📘 CBSE Result
+    </a>
+
+    <a href="https://upresults.nic.in/"
+    target="_blank" rel="noopener noreferrer">
+    📝 UP Board Result
+    </a>
+
+    <a href="https://ssc.nic.in/"
+    target="_blank" rel="noopener noreferrer">
+    💼 SSC Result
+    </a>
+
+    <a href="https://www.rrbcdg.gov.in/"
+    target="_blank" rel="noopener noreferrer">
+    🚂 Railway Result
+    </a>
+
+    <a href="https://medhasoft.bih.nic.in/"
+    target="_blank" rel="noopener noreferrer">
+    🎓 Scholarship Status
+    </a>
+
+    <a href="https://cuet.samarth.ac.in/"
+    target="_blank" rel="noopener noreferrer">
+    📚 CUET Result
+    </a>
+
+    <a href="https://jeemain.nta.nic.in/"
+    target="_blank" rel="noopener noreferrer">
+    🧠 JEE Main Result
+    </a>
+
+    <a href="https://neet.nta.nic.in/"
+    target="_blank" rel="noopener noreferrer">
+    🩺 NEET Result
+    </a>
+
+    <a href="https://www.sarkariresult.com/"
+    target="_blank" rel="noopener noreferrer">
+    🌐 Sarkari Result
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer>
+    <p>© 2026 Dev Cyber Cafe</p>
+    <p>All Online Services Available</p>
+    <p>📞 Contact: 7488460423</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+
+  <a href="https://wa.me/917488460423"
+  class="whatsapp"
+  target="_blank">
+  💬
+  </a>
+
+  <!-- Clock Script -->
+
+  <script>
+
+    setInterval(()=>{
+      document.getElementById('clock').innerHTML =
+      "🕒 " + new Date().toLocaleString();
+    },1000);
+
+  </script>
+
+</body>
+</html>
